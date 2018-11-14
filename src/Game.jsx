@@ -32,7 +32,11 @@ class Game extends React.Component {
         return squares[a];
       }
     }
-    return null;
+    if(this.state.history.length === 10){
+      return "Cat's Game!"
+    } else {
+      return null;
+    }
   }
 
   handleClick(i) {
@@ -75,8 +79,10 @@ class Game extends React.Component {
 
 
     let status;
-    if (winner) {
+    if (winner && winner != "Cat's Game!") {
       status = `Winner: ${winner}`;
+    } else if (winner == "Cat's Game!") {
+      status = `${winner}`;
     } else {
       status = `Next Player: ${this.state.xIsNext ? 'X' : '0'}`;
     }
