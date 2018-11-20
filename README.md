@@ -1,44 +1,52 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# _React Tic-Tac-Toe_
 
-## Available Scripts
+#### _A React Tutorial, 11/13/18_
 
-In the project directory, you can run:
+#### By _**Luke Vandekieft & Ben Kiggen**_
 
-### `npm start`
+## Description
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+_Today we followed along with React's official tutorial to get a better idea of how it functions. As an added challenge we chose to split up the three main sections into separate components which challenged our concepts of data transfer, state, and class vs. function formatting._
+<br>
+<br>
+<kbd>
+  <img src="https://github.com/lukevandekieft/react-tic-tac-toe/blob/master/src/assets/images/live-site.gif">
+</kbd>
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
 
-### `npm test`
+## Setup/Installation Requirements
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* _Download file from Github._
 
-### `npm run build`
+      $ git clone https://github.com/lukevandekieft/react-tic-tac-toe.git
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* _Install NPM (node package manager) as needed - instructions can be found at https://www.npmjs.com/get-npm ._
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+* _Install necessary webpack dependencies for project._
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+      $ npm install
 
-### `npm run eject`
+* _Compile and open webpage in developer mode._
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+      $ npm run start
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+_No production version of this site is available for viewing._
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Technologies Used
 
-## Learn More
+* _HTML_
+* _JavaScript_
+* _React_
+* _Webpack_
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Support and contact details
+
+_If you have any suggestions or comments please forward them to Luke Vandekieft at vandekie@gmail.com_
+
+## License
+
+*This software is licensed under the MIT License.*
+
+Copyright (c) 2018 **_Luke Vandekieft_** 
