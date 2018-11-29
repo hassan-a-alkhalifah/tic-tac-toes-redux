@@ -7,9 +7,9 @@ class Game extends React.Component {
     this.state = {
       history: [
         {
-        squares: Array(9).fill(null),
-      }
-    ],
+          squares: Array(9).fill(null),
+        }
+      ],
       stepNumber: 0,
       xIsNext: true,
     };
@@ -33,7 +33,7 @@ class Game extends React.Component {
       }
     }
     if(this.state.history.length === 10){
-      return "Cat's Game!"
+      return 'Cat\'s Game!';
     } else {
       return null;
     }
@@ -48,12 +48,12 @@ class Game extends React.Component {
     }
     squares[i] = this.state.xIsNext ? 'X' : '0';
     this.setState({
-      history: history.concat([{
-        squares: squares,
-      }]),
-      stepNumber: history.length,
-      xIsNext: !this.state.xIsNext,
-    });
+        history: history.concat([{
+          squares: squares,
+        }]),
+        stepNumber: history.length,
+        xIsNext: !this.state.xIsNext,
+    }, () => console.log(this.state));
   }
 
   jumpTo(move) {
@@ -69,19 +69,18 @@ class Game extends React.Component {
     const winner = this.calculateWinner(current.squares);
 
     const moves = history.map((index, move) => {
-      const desc = move ? `Go to move #${move}` : `Go to game start`;
+      const desc = move ? `Go to move #${move}` : 'Go to game start';
       return (
         <li key={move}>
           <button onClick={() => this.jumpTo(move)}>{desc}: {((move % 2) === 0) ? 'X':'0'}&#39;s turn</button>
         </li>
       );
-    })
-
+    });
 
     let status;
-    if (winner && winner != "Cat's Game!") {
+    if (winner && winner !== 'Cat\'s Game!') {
       status = `Winner: ${winner}`;
-    } else if (winner == "Cat's Game!") {
+    } else if (winner === 'Cat\'s Game!') {
       status = `${winner}`;
     } else {
       status = `Next Player: ${this.state.xIsNext ? 'X' : '0'}`;
@@ -90,10 +89,10 @@ class Game extends React.Component {
     return (
       <div className="game">
         <div className="game-board">
-          <Board status={status}
+          <Board
             onClick={(i) => this.handleClick(i)}
             squares={current.squares}
-            />
+          />
         </div>
         <div className="game-info">
           <div>{status}</div>

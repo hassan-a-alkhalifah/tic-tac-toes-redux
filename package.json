@@ -5,14 +5,16 @@
   "dependencies": {
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
-    "react-scripts": "2.1.1"
+    "react-redux": "^5.0.6",
+    "react-scripts": "2.1.1",
+    "redux": "^3.7.2"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "jest; exit 0",
     "eject": "react-scripts eject",
-    "lint-fix": "eslint src/** src/**/** --fix; exit 0"
+    "lint-fix": "eslint 'src/**' 'src/**/**' --fix; exit 0"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -22,5 +24,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2"
+  }
 }
