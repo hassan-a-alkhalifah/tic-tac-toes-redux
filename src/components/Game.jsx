@@ -1,5 +1,6 @@
 import React from 'react';
 import Board from './Board.jsx';
+import { connect } from 'react-redux';
 
 class Game extends React.Component {
   constructor(props) {
@@ -92,6 +93,7 @@ class Game extends React.Component {
           <Board
             onClick={(i) => this.handleClick(i)}
             squares={current.squares}
+            test={this.props.squares}
           />
         </div>
         <div className="game-info">
@@ -103,4 +105,10 @@ class Game extends React.Component {
   }
 }
 
-export default Game;
+const mapStateToProps = state => {
+  return {
+    squares: state.moveList.squares
+  }
+}
+
+export default connect(mapStateToProps)(Game);

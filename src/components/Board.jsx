@@ -10,6 +10,8 @@ function Board(props) {
         value={props.squares[i]}
         onClick={() => props.onClick(i)}
         squareNumber={i}
+        squares={props.squares}
+        test={props.test}
       />
     );
   }
